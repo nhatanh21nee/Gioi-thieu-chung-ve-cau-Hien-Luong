@@ -13,92 +13,101 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
-            color: #000000; /* Màu chữ đen */
+            color: #000000;
+            margin: 0;
+            font-family: "Baloo 2", sans-serif;
         }
-
-        th {
-            background-color: #FF1493; /* Màu hồng */
-            color: #FFFFFF;
-            font-family: "Baloo 2";
-            width: 100%;
+        header {
+            background-color: #FF4500;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2em;
+            border-bottom: 5px solid #fff;
+            font-family: "Baloo 2", sans-serif;
         }
-
         .container {
             display: flex;
             flex-wrap: wrap;
-            font-family: "Baloo 2";
-            font-size: 20px;
-            margin: 20px auto;
-            text-align: center;
             justify-content: center;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
         }
-
+        .Bang {
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            transition: background-color 2s ease-out 100ms;
+        }
+        .Bang:hover {
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .p {
+            font-weight: 700;
+            font-size: 1.1em;
+        }
         footer {
-            background-color: #90ee90; /* Màu xanh lá cây nhạt */
-            border-radius: 50%; /* Hình tròn */
-            padding: 15px 30px;
-            width: 200px; /* Điều chỉnh lại chiều rộng */
-            height: 200px; /* Điều chỉnh lại chiều cao */
+            background-color: #90ee90;
+            border-radius: 50%;
+            padding: 20px;
+            width: 250px;
+            height: 250px;
             text-align: center;
-            color: #ff1493; /* Chữ màu hồng */
-            font-size: 16px; /* Giảm kích thước chữ để vừa với khối */
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
+            color: #ff1493;
+            font-size: 18px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
             margin: 20px auto;
-            font-family: "Baloo 2";
         }
-
+        footer a {
+            color: #13234B;
+            text-decoration: none;
+        }
         .header {
-            background-color: #FF4500; /* Màu đỏ */
+            background-color: #FF4500;
             color: #ffffff;
             border-radius: 20px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            padding: 10px 15px; /* Giảm padding */
-            font-size: 22px; /* Giảm font-size */
-            margin-left: 20px;
-            font-family: "Baloo 2";
-            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
-
-        .Bang {
-            margin: 10px;
-            background-color: #ffffff;
-            border-radius: 20px;
-            height: 100%;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 2s ease-out 100ms;
-        }
-
-        .Bang:hover {
-            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .p {
-            font-weight: 700;
-        }
-
-        /* CSS cho màn hình điện thoại */
-        @media only screen and (max-width: 550px) {
+        @media only screen and (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+            }
             .container {
-                font-size: 18px;
+                padding: 10px;
             }
-            .header {
-                font-size: 18px; /* Điều chỉnh kích thước tiêu đề cho điện thoại */
+            .Bang {
+                width: 90%;
+            }
+            footer {
+                width: 200px;
+                height: 200px;
+                font-size: 14px;
             }
         }
-
-        /* Căn chỉnh ảnh */
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-        }
-
-        .image-container img {
-            border-radius: 20px;
-            max-width: 100%; /* Đảm bảo ảnh không vượt qua chiều rộng container */
-            height: auto; /* Giữ tỷ lệ ảnh */
+        @media only screen and (max-width: 480px) {
+            header {
+                font-size: 1.2em;
+            }
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .Bang {
+                width: 100%;
+            }
+            footer {
+                width: 180px;
+                height: 180px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -106,7 +115,7 @@
     <header class="header">
         <b>Giới thiệu chung về cầu Hiền Lương</b>
     </header>
-    
+
     <div class="container">
         <div class="Bang">
             <div style="padding: 15px; text-align: left;">
@@ -118,15 +127,15 @@
 
                 <p><span class="p">Biểu tượng của sự thống nhất:</span></p>
                 <p>Cầu Hiền Lương không chỉ là một công trình giao thông đơn thuần mà còn là biểu tượng của sự thống nhất dân tộc Việt Nam. Trong suốt những năm tháng chia cắt, cầu Hiền Lương là chứng nhân cho cuộc "chiến tranh âm thanh", "cuộc chiến màu sắc" và "cuộc chọi cờ" giữa hai miền Bắc - Nam. Sau khi đất nước thống nhất, cầu Hiền Lương trở thành di tích quốc gia, thể hiện khát vọng hòa bình và đoàn kết của toàn thể dân tộc.</p>
-                <div class="image-container">
-                    <img src="https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng%207/Ng%C3%A0y_26/VI%E1%BA%BET%20B%C3%8AN%20C%E1%BA%A6U%20HI%E1%BB%80N%20L%C6%AF%C6%A0NG/3.jpg" alt="Ảnh cầu Hiền Lương">
+                <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                    <img src="https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng%207/Ng%C3%A0y_26/VI%E1%BA%BET%20B%C3%8AN%20C%E1%BA%A6U%20HI%E1%BB%80N%20L%C6%AF%C6%A0NG/3.jpg" alt="Ảnh cầu Hiền Lương" style="border-radius: 20px; width: 100%; max-width: 600px;">
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p><a href="trangchu.html" style="color: #13234B; text-decoration: none;">Quay trở về trang chủ</a> - Thực hiện bởi Nguyễn Đức Nhật Anh, Nguyễn Thị Quỳnh Như và Hoàng Thảo Nguyên - 26/12/2024</p>
+        <p><a href="trangchu.html">Quay trở về trang chủ</a> - Thực hiện bởi Nguyễn Đức Nhật Anh, Nguyễn Thị Quỳnh Như và Hoàng Thảo Nguyên - 26/12/2024</p>
     </footer>
 </body>
 </html>
